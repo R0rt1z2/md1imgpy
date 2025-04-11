@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md1imgpy"
+version = "0.1.0"
+authors = [
+    { name = "Roger Ortiz", email = "me@r0rt1z2.com" }
+]
+description = "MediaTek MD1 image packer/unpacker"
+readme = "README.md"
+requires-python = ">=3.8.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Recovery Tools",
+]
+
+[project.scripts]
+md1img = "md1imgpy.main:main"
+
+[project.urls]
+homepage = "https://github.com/R0rt1z2/md1imgpy"
+documentation = "https://github.com/R0rt1z2/md1imgpy/blob/master/README.md"
+issues = "https://github.com/R0rt1z2/md1imgpy/issues"
+
+[tool.mypy]
+python_version = "3.8"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.ruff]
+line-length = 88
+lint.extend-select = ['A', 'FA100', 'FA102', 'I']
+
+[tool.ruff.format]
+quote-style = 'single'
